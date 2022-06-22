@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ConstraintActivity">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="0dp"
@@ -52,50 +44,36 @@
         app:layout_constraintGuide_end="40dp" />
 
     <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        tools:layout_editor_absoluteX="277dp" />
+
+    <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="20dp"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toStartOf="@+id/guideline3" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <Button
+        android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Amol"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3" />
 
-    <TextView
-        android:id="@+id/textView3"
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Wahane"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="right"
-        app:constraint_referenced_ids="textView2,textView3"
-        tools:layout_editor_absoluteX="411dp"
-        />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="age 22"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintLeft_toLeftOf="@+id/barrier3"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        android:visibility="visible"
+        app:constraint_referenced_ids="button3,button4,button5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
